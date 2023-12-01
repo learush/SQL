@@ -1,0 +1,3 @@
+Select item_name, category, stock_quantity, Max(average_rating), price
+from superstore
+Group by Category;
