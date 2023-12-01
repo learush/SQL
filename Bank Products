@@ -1,0 +1,10 @@
+#List the product name, interest rate, monthly fee, and minimum balance for all checking and savings accounts.
+Select product_name, interest_rate, monthly_fee, minimum_balance
+FROM bank_products
+Where product_type = "Savings" or "Checking";
+
+#List the products which have an interest rate of at least 0.75% and have no monthly fee
+Select product_name, interest_rate
+FROM bank_products
+Where product_type = "Savings" AND interest_rate >= 0.75 AND monthly_fee<=0
+Order by interest_rate;
